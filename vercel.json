@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "functions": {
-    "api/index.ts": {
-      "runtime": "edge"
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index"
     }
-  }
+  ]
 }
